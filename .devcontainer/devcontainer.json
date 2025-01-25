@@ -2,9 +2,8 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "docker-testing",
-    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     "dockerFile": "Dockerfile",
-
+    "mounts": [],
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
@@ -19,7 +18,16 @@
     "postStartCommand": "echo 'Post Start'", // Seems like always with post attach (start then attach)
 
     // Configure tool-specific properties.
-    // "customizations": {},
+    "customizations": {
+
+        // Configure properties specific to VS Code.
+        "vscode": {
+
+            // Set *default* container specific settings.json values on container create.
+            // "settings": {},
+            // "extensions": [],
+        }
+    },
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "root"
