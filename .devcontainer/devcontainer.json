@@ -9,13 +9,13 @@
     // "features": {},
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [],
+    "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
     // "postCreateCommand": "uname -a",
-    "postAttachCommand": "echo 'Post Attach'", // every time I open code in the container
-    "postCreateCommand": "echo 'Post Create'", // Once the first time I create the container
-    "postStartCommand": "echo 'Post Start'", // Seems like always with post attach (start then attach)
+    "postCreateCommand": "echo 'Post Create'", // Run the one-time init script for the repo
+    "postStartCommand": "echo 'Post Start'", // Run the update script that updates the tools
+    "postAttachCommand": "echo 'Post Attach'", // Run status.sh, prints the versions and statuses of the tools
 
     // Configure tool-specific properties.
     "customizations": {
@@ -33,8 +33,9 @@
     // "remoteUser": "root"
 
     "runArgs": [
-        "--name", "docker-testing"
+        "--name", "docker-testing",
+        "--env-file", ".devcontainer/devcontainer.env"
     ]
 
-    // "runArgs": ["--env-file", ".devcontainer/devcontainer.env"],
+    // "runArgs": [],
 }
