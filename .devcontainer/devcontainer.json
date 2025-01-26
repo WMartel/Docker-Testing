@@ -34,7 +34,7 @@
 
     "runArgs": [
         "--name", "docker-testing",
-        "--env-file", ".devcontainer/devcontainer.env"
+        "--env-file", ".env"
     ]
 
     // "runArgs": [],
