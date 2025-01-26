@@ -2,24 +2,16 @@
     "name": "docker-testing",
     "dockerFile": "Dockerfile",
     "mounts": [],
-
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [],
-
-    //"postCreateCommand": "echo 'Post Create'", // Run the one-time init script for the repo
-    //"postStartCommand": "echo 'Post Start'", // Run the update script that updates the tools
-    "postAttachCommand": "./scripts/status.sh", // Run status.sh
-
+    "postCreateCommand": "./scripts/init.sh",
+    "postStartCommand": "./scripts/update.sh'",
+    "postAttachCommand": "./scripts/status.sh",
     "customizations": {
         "vscode": {
             "settings": {},
             "extensions": []
         }
     },
-
-    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    // "remoteUser": "root"
-
     "runArgs": [
         "--name", "docker-testing",
         "--env-file", ".devcontainer/.env",

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-#Prints the versions and statuses of the tools
+# updates the tools
