@@ -14,7 +14,6 @@
     },
     "runArgs": [
         "--name", "docker-testing",
-        "--env-file", ".devcontainer/.env",
-        "--env-file", ".devcontainer/.local.env"
+        "--env-file", ".devcontainer/.env"
     ]
 }
