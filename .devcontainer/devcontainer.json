@@ -4,7 +4,7 @@
     "mounts": [],
     "forwardPorts": [],
     "postCreateCommand": "./scripts/init.sh",
-    "postStartCommand": "./scripts/update.sh'",
+    "postStartCommand": "./scripts/update.sh",
     "postAttachCommand": "./scripts/status.sh",
     "customizations": {
         "vscode": {
