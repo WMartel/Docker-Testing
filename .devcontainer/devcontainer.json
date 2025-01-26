@@ -1,7 +1,13 @@
 {
     "name": "docker-testing",
     "dockerFile": "Dockerfile",
-    "mounts": [],
+    "mounts": [
+        {
+            "source": "${localEnv:USERPROFILE}/.ssh",
+            "target": "${containerEnv:HOME}/.ssh",
+            "type": "bind"
+        }
+    ],
     "forwardPorts": [],
     "postCreateCommand": "./scripts/init.sh",
     "postStartCommand": "./scripts/update.sh",
