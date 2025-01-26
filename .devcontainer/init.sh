@@ -1,1 +1,1 @@
-echo 'init.sh'
+#echo 'init.sh'

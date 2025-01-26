@@ -3,39 +3,37 @@
 {
     "name": "docker-testing",
     "dockerFile": "Dockerfile",
-    "mounts": [],
+    //"mounts": [],
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [],
+    //"forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
     // "postCreateCommand": "uname -a",
-    "postCreateCommand": "echo 'Post Create'", // Run the one-time init script for the repo
-    "postStartCommand": "echo 'Post Start'", // Run the update script that updates the tools
-    "postAttachCommand": "echo 'Post Attach'", // Run status.sh, prints the versions and statuses of the tools
+    //"postCreateCommand": "echo 'Post Create'", // Run the one-time init script for the repo
+    //"postStartCommand": "echo 'Post Start'", // Run the update script that updates the tools
+    //"postAttachCommand": "echo 'Post Attach'", // Run status.sh, prints the versions and statuses of the tools
 
     // Configure tool-specific properties.
-    "customizations": {
+    //"customizations": {
 
         // Configure properties specific to VS Code.
-        "vscode": {
+        //"vscode": {
 
             // Set *default* container specific settings.json values on container create.
             // "settings": {},
             // "extensions": [],
-        }
-    },
+        //}
+    //},
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "root"
 
     "runArgs": [
-        "--name", "docker-testing",
-        "--env-file", ".env"
+        "--name", "docker-testing"
+        //"--env-file", ".env"
     ]
-
-    // "runArgs": [],
 }
