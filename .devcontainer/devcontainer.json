@@ -8,7 +8,7 @@
 
     //"postCreateCommand": "echo 'Post Create'", // Run the one-time init script for the repo
     //"postStartCommand": "echo 'Post Start'", // Run the update script that updates the tools
-    "postAttachCommand": "echo 'Post Attach'", // Run status.sh, prints the versions and statuses of the tools
+    "postAttachCommand": "./scripts/status.sh", // Run status.sh
 
     "customizations": {
         "vscode": {
