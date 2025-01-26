@@ -4,7 +4,7 @@
     "mounts": [
         {
             "source": "${localEnv:USERPROFILE}/.ssh",
-            "target": "${containerEnv:HOME}/.ssh",
+            "target": "/root/.ssh",
             "type": "bind"
         }
     ],
