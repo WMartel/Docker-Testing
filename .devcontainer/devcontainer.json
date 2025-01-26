@@ -21,7 +21,7 @@
     // "remoteUser": "root"
 
     "runArgs": [
-        "--name", "docker-testing"
-        //"--env-file", ".env"
+        "--name", "docker-testing",
+        "--env-file", ".devcontainer/.env"
     ]
 }
