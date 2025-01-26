@@ -3,7 +3,7 @@
 {
     "name": "docker-testing",
     "dockerFile": "Dockerfile",
-    //"mounts": [],
+    "mounts": [],
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
@@ -18,16 +18,16 @@
     //"postAttachCommand": "echo 'Post Attach'", // Run status.sh, prints the versions and statuses of the tools
 
     // Configure tool-specific properties.
-    //"customizations": {
+    "customizations": {
 
         // Configure properties specific to VS Code.
-        //"vscode": {
+        "vscode": {
 
             // Set *default* container specific settings.json values on container create.
-            // "settings": {},
-            // "extensions": [],
-        //}
-    //},
+            "settings": {},
+            "extensions": [],
+        }
+    },
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "root"
